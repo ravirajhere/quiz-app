@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- ============ HOME SCREEN ============ -->
+    <section id="homeScreen" class="screen active">
+      <div class="home-box">
+        <h1>🧠 Quiz App</h1>
+        <p class="subtitle">Test your JavaScript basics</p>
+        <div class="high-score-box">
+          <span class="label">High Score</span>
+          <span id="highScore" class="score">0 / 10</span>
+        </div>
+        <button id="startBtn" class="btn primary">Start Quiz</button>
+      </div>
+    </section>
+
+    <!-- ============ QUIZ SCREEN ============ -->
+    <section id="quizScreen" class="screen">
+      <div class="quiz-header">
+        <span id="questionCounter">Question 1 of 10</span>
+        <span id="timer" class="timer">30s</span>
+      </div>
+      <div class="progress-bar">
+        <div id="progressFill" class="progress-fill"></div>
+      </div>
+
+      <h2 id="questionText" class="question-text">Loading...</h2>
+
+      <div id="options" class="options">
+        <!-- Options will be injected by JavaScript -->
+      </div>
+
+      <button id="nextBtn" class="btn next" disabled>Next →</button>
+    </section>
+
+    <!-- ============ RESULT SCREEN ============ -->
+    <section id="resultScreen" class="screen">
+      <div class="result-box">
+        <h1 id="resultEmoji">🎉</h1>
+        <h2 id="resultTitle">Quiz Complete!</h2>
+        <div class="result-score">
+          <span class="label">Your Score</span>
+          <span id="finalScore" class="score">0 / 10</span>
+        </div>
+        <p id="resultMessage" class="result-message">Good effort!</p>
+        <div class="result-actions">
+          <button id="restartBtn" class="btn primary">Try Again</button>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
